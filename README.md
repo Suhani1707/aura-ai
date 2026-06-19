@@ -58,10 +58,6 @@ The platform serves three roles:
 ![Wellness Report](./screenshots/02-wellness-report.png)
 *PHQ-9 and GAD-7 results presented clearly, with personalized recommendations based on severity.*
 
-### Student Dashboard
-![Student Dashboard](./screenshots/03-dashboard.png)
-*A daily wellness hub — mood check-in, streaks, quick actions, and a personalized resource library.*
-
 ### AI Chat Support (Multilingual)
 ![AI Chat](./screenshots/04-ai-chat.png)
 *Conversational support that responds naturally in English, Hindi, and Marathi.*

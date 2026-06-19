@@ -62,19 +62,19 @@ The platform serves three roles:
 ![AI Chat](./screenshots/04-ai-chat.png)
 *Conversational support that responds naturally in English, Hindi, and Marathi.*
 
-### Mood Tracker
+### Game
 ![Game ](./screenshots/05-mood-tracker.png)
-*7-day mood trend visualization with streaks and a recent mood log.*
 
-### Anonymous Peer Community
-![Counselor Dashboard](./screenshots/06-community.png)
-*Students share and support each other anonymously, tagged by topic.*
 
 ### Counselor Dashboard
+![Counselor Dashboard](./screenshots/06-community.png)
+
+
+### Admin Portal
 ![Admin Portal](./screenshots/07-counselor-dashboard.png)
 *Counselors see flagged students sorted by severity and join sessions in one click.*
 
-### Admin Analytics
+### 
 ![](./screenshots/08-admin-overview.png)
 *Real-time, anonymized campus mental health metrics for institutional oversight.*
 

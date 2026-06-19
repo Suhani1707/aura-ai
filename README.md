@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Aura AI 🌿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aura AI is a student mental wellness platform that connects students, counselors, and administrators in one place. It combines guided self-help tools, peer community, mood tracking, and direct access to counselors to support student mental health.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Student Dashboard** — central hub for all wellness tools
+- **Self-Assessment** — guided check-ins to help students reflect on how they're feeling
+- **Mood Tracker** — log and visualize mood over time
+- **AI Chat Support** — conversational support for students
+- **Wellness Games** — interactive breathing, memory, and bubble-pop games designed to ease stress and anxiety
+- **Guided Audio** — breathing, meditation, and nature soundscapes
+- **Community** — peer space for students to connect and share
+- **Counselor Booking** — students can reach out to counselors directly
+- **Counselor Dashboard** — counselors can manage and respond to student requests
+- **Admin Dashboard** — oversight and management tools for administrators
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend:** React, React Router
+- **Backend:** Node.js, Express
+- **Database / Auth:** [Supabase](https://supabase.com) (PostgreSQL, Auth)
+- **HTTP Client:** Axios
+- **Icons:** Lucide React
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+\`\`\`
+aura-project/
+├── backend/
+│   ├── routes/          # auth, mood, sessions, chatbot, admin, assessment
+│   ├── middleware/       # auth middleware
+│   ├── supabase.js       # Supabase client setup
+│   └── server.js         # Express entry point
+├── public/
+│   └── audios/            # breathing, meditation, nature sounds
+└── src/
+    ├── pages/
+    │   ├── Login.jsx
+    │   ├── student/        # Dashboard, Assessment, Chat, Resources, Community, Games, MoodTracker
+    │   ├── counselor/      # Counselor dashboard & login
+    │   └── admin/          # Admin dashboard
+    ├── components/         # Shared and role-specific components
+    ├── context/             # App-wide context providers
+    └── i18n/                # Localization
+\`\`\`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm
+- A Supabase project (free tier works)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Clone the repository
+\`\`\`bash
+git clone https://github.com/Suhani1707/aura-ai.git
+cd aura-ai
+\`\`\`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Set up the frontend
+\`\`\`bash
+npm install
+\`\`\`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Create a \`.env\` file in the root directory:
+\`\`\`
+REACT_APP_SUPABASE_URL=your_supabase_project_url
+REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
+\`\`\`
 
-### `npm run eject`
+Run the frontend:
+\`\`\`bash
+npm start
+\`\`\`
+Runs at \`http://localhost:3000\`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Set up the backend
+\`\`\`bash
+cd backend
+npm install
+\`\`\`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create a \`.env\` file inside \`backend/\`:
+\`\`\`
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_KEY=your_supabase_service_or_anon_key
+PORT=5000
+\`\`\`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Run the backend:
+\`\`\`bash
+node server.js
+\`\`\`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Roadmap
 
-## Learn More
+- [ ] Real-time chat
+- [ ] Push notifications for counselor responses
+- [ ] Deployed live demo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is for educational purposes.

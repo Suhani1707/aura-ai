@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../config';
 
 const MOODS = [
   { emoji: '😔', label: 'Sad',     value: 1, color: '#a78bfa', bg: '#ede9fe' },
@@ -72,7 +73,7 @@ export default function MoodTracker() {
     setSaved(true);
 
     // Save to backend
-    fetch('http://localhost:5000/api/mood/save', {
+  fetch(`${API_URL}/api/mood/save`, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ aura_id: auraId, date: todayKey, ...entry }),

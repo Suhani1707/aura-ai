@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { API_URL } from '../../config';
 // ── Sample community posts (will come from Supabase later)
 const INITIAL_POSTS = [
   {

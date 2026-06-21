@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../config';
 
 // ── Crisis keywords
 const CRISIS_KEYWORDS = [
@@ -141,7 +142,7 @@ export default function Chat() {
 
     // Try real backend first, fallback to smart auto reply
     try {
-      const res = await fetch('http://localhost:5000/api/chatbot/message', {
+     const res = await fetch(`${API_URL}/api/chatbot/message`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ aura_id: 'AURA-2025-047', message: msg, language }),

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../config';
 
 // ── PHQ-9 Questions (Depression)
 const PHQ9 = [
@@ -137,7 +138,7 @@ export default function Assessment() {
 
       // Also save to backend
       if (auraId) {
-        fetch('http://localhost:5000/api/assessment/save', {
+       fetch(`${API_URL}/api/assessment/save`, {
           method:  'POST',
           headers: { 'Content-Type': 'application/json' },
           body:    JSON.stringify({

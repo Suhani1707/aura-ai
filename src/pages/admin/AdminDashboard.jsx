@@ -65,7 +65,8 @@ const RESOURCE_USAGE = [
   { name: 'Meditation',     uses: 245, icon: '🌿', color: '#eab308' },
 ];
 
-const API = 'http://localhost:5000/api';
+import { API_URL } from '../../config';
+const API = `${API_URL}/api`;
 
 export default function AdminDashboard() {
   const navigate      = useNavigate();

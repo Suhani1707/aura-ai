@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-const API = 'http://localhost:5000/api';
+import { API_URL } from '../../config';
+const API = `${API_URL}/api`;
 
 const TITLES = [
   'Clinical Psychologist',

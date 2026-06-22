@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../config';
 
 const STATS = {
   totalStudents: 1247,
@@ -65,7 +66,7 @@ const RESOURCE_USAGE = [
   { name: 'Meditation',     uses: 245, icon: '🌿', color: '#eab308' },
 ];
 
-import { API_URL } from '../../config';
+
 const API = `${API_URL}/api`;
 
 export default function AdminDashboard() {

@@ -36,6 +36,17 @@ app.get('/', (req, res) => {
   res.json({ status: '🌿 Aura backend is running!', time: new Date() });
 });
 
+// ── Keep-alive ping (hits Supabase to prevent pausing)
+const supabase = require('./supabase');
+app.get('/ping', async (req, res) => {
+  try {
+    await supabase.from('students').select('aura_id').limit(1);
+    res.json({ status: '✅ alive', time: new Date() });
+  } catch (err) {
+    res.json({ status: '⚠️ ping failed', error: err.message });
+  }
+});
+
 // ── Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
